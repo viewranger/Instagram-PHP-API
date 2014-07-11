@@ -1,9 +1,9 @@
 {
-	"name": "cosenary/instagram",
+	"name": "viewranger/instagram",
 	"type": "library",
 	"description": "An easy-to-use PHP Class for accessing Instagram's API.",
 	"keywords": ["instagram", "api"],
-	"homepage": "https://github.com/cosenary/Instagram-PHP-API",
+	"homepage": "https://github.com/viewranger/Instagram-PHP-API",
 	"license": "BSD",
 	"authors": [
 		{
@@ -18,7 +18,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Instagram": "lib/"
+			"Viewranger": "lib/"
 		}
 	}
 }
