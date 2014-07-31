@@ -142,12 +142,15 @@ class Instagram {
    *
    * @param integer [optional] $id        Instagram user ID
    * @param integer [optional] $limit     Limit of returned results
+   * @param long [optional] $minTimestamp Media taken later than this timestamp (default: 5 days ago)
+   * @param long [optional] $maxTimestamp Media taken earlier than this timestamp (default: now)
    * @return mixed
    */
-  public function getUserMedia($id = 'self', $limit = 0) {
-    return $this->_makeCall('users/' . $id . '/media/recent', ($id === 'self'), array('count' => $limit));
+  public function getUserMedia($id = 'self', $limit = 0, $minTimestamp = NULL, $maxTimestamp = NULL) {
+    return $this->_makeCall('users/' . $id . '/media/recent', ($id === 'self'), array('count' => $limit, 'min_timestamp' => $minTimestamp, 'max_timestamp' => $maxTimestamp));
   }
 
+  
   /**
    * Get the liked photos of a user
    *
